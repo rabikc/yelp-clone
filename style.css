@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #e00707;
+  --hover-primary-color: #f40d15;
+  --divider-color: rgb(230 230 230);
+  --dark-divider-color: rgb(210 210 210);
+  --hover-gray: rgb(247 247 247);
+  --gray-text: #717171;
+  --dark-shadow: rgb(200 200 200);
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.page-header {
+  position: fixed;
+  top: 24px;
+  width: 100%;
+}
+
+.page-header a {
+  color: #fff;
+}
+
+.header-container .top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header-container .search-form {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.header-container .search-form .input-wrapper {
+  position: relative;
+  display: block;
+  flex: 1;
+  background-color: #fff;
+}
+
+.header-container .search-form .input-wrapper:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.header-container .search-form .input-wrapper:first-child::after {
+  content: " ";
+  width: 1.5px;
+  height: 65%;
+  background-color: var(--divider-color);
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+}
+
+.header-container .input-wrapper label {
+  padding: 13px 1rem;
+  display: block;
+}
+
+.header-container .search-form .btn-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container .btn-wrapper button {
+  height: 100%;
+  padding: 13px 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+.header-container .user-actions-section {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header-container .user-actions-section > a {
+  font-size: 15px;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.header-container .user-actions-section > a:hover {
+  background-color: rgba(180 180 180 / 0.5);
+}
+
+.header-container .user-actions-section .registration {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-container .registration a {
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 150ms ease;
+}
+
+.header-container .registration a:first-child {
+  border: 2px solid var(--divider-color);
+}
+
+.header-container .registration a:first-child:hover {
+  background-color: rgba(180 180 180 / 0.5);
+}
+
+.header-container .registration a:last-child {
+  background-color: var(--primary-color);
+}
+
+.header-container .registration a:last-child:hover {
+  background-color: var(--hover-primary-color);
+}
+
+.hero-section {
+  width: 100%;
+  min-height: 91vh;
+  background: url(./assests/hero-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 30px 80px 180px #000 inset;
+}
