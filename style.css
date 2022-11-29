@@ -20,6 +20,7 @@
   --dark-shadow: rgb(200 200 200);
   --black-text: rgb(45 45 45);
   --anchor-color: rgba(2, 122, 151, 1);
+  --white-text: rgb(252 252 252);
 }
 
 .container {
@@ -34,6 +35,20 @@ button {
   display: inline-block;
 }
 
+/* h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+span,
+button,
+a,
+div {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+
 li {
   list-style: none;
 }
@@ -47,6 +62,7 @@ a {
   position: absolute;
   top: 24px;
   width: 100%;
+  z-index: 10;
 }
 
 .page-header a {
@@ -58,6 +74,16 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+}
+
+.header-container .top-part .logo-container {
+  min-width: 80px;
+  width: calc((100vw - 810px) / 2);
+}
+
+.header-container .logo-container a {
+  display: flex;
+  min-width: 80px;
 }
 
 .header-container .search-form {
@@ -80,8 +106,8 @@ a {
 
 .header-container .search-form .input-wrapper:first-child::after {
   content: " ";
-  width: 1.5px;
-  height: 65%;
+  width: 2px;
+  height: 50%;
   background-color: var(--divider-color);
   position: absolute;
   top: 50%;
@@ -121,13 +147,17 @@ a {
 
 .header-container .btn-wrapper button {
   height: 100%;
-  padding: 13px 1rem;
+  padding: 12px 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: var(--primary-color);
+}
+
+.header-container .search-form path {
+  fill: #fff;
 }
 
 .header-container .user-actions-section {
@@ -175,15 +205,131 @@ a {
   background-color: var(--hover-primary-color);
 }
 
-.hero-wrapper {
+.header-container .bottom-wrapper {
+  margin-left: 112px;
+  padding-left: 227px;
+}
+
+.header-container .bottom-wrapper ul {
+  display: flex;
+}
+
+.header-container .bottom-wrapper li {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 4px solid #e94848;
+  border-color: transparent;
+  transition: border 150ms ease;
+}
+
+.header-container .bottom-wrapper li:hover {
+  border-bottom: 4px solid #e94848;
+}
+
+.header-container .bottom-wrapper a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.header-container .bottom-wrapper a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container .bottom-wrapper path {
+  fill: white;
+}
+
+.hero-section {
   width: 100%;
   min-height: 682px;
   max-height: auto;
   background: linear-gradient(to top, rgba(20 20 20 / 0), rgba(20 20 20 / 0.5)),
     url(./assests/hero-1.jpg);
-  background-position: center;
+  background-position: 50% 0%;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section .hero-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-35%);
+  z-index: 5;
+}
+
+.hero-section .hero-top-part {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-section .hero-top-part .indicator-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hero-section .hero-top-part .indicator {
+  width: 10px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.hero-section .title-section .hero-title {
+  font-size: 3.1rem;
+  color: var(--white-text);
+  margin-bottom: 1rem;
+}
+
+.hero-section .title-section a {
+  background-color: var(--primary-color);
+  padding: 0.8rem 2.1rem;
+  display: flex;
+  width: fit-content;
+  gap: 0.5rem;
+  color: var(--white-text);
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 150ms ease;
+}
+
+.hero-section .title-section a:hover {
+  background-color: var(--hover-primary-color);
+  box-shadow: 1px 1px 5px var(--black-text);
+}
+
+.hero-section .title-section path {
+  fill: white;
+}
+
+.hero-bottom-part {
+  margin-top: 5.5rem;
+}
+
+.hero-bottom-part .tooltip-wrapper a {
+  font-weight: 600;
+  color: var(--white-text);
+  font-size: 0.9rem;
+}
+
+.hero-bottom-part .tooltip-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.hero-bottom-part .photo-credits {
+  color: var(--white-text);
+  font-size: 0.9rem;
 }
 
 .recent-activity-section {
