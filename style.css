@@ -78,7 +78,7 @@ a {
 
 .header-container .top-part .logo-container {
   min-width: 80px;
-  width: calc((100vw - 1144px) / 2);
+  width: calc((100vw - 990px) / 2) !important;
 }
 
 .header-container .logo-container a {
@@ -211,7 +211,7 @@ a {
   min-width: fit-content;
 }
 
-.header-container .bottom-wrapper ul {
+.header-container .bottom-wrapper > ul {
   display: flex;
 }
 
@@ -219,9 +219,14 @@ a {
   position: relative;
   display: flex;
   align-items: stretch;
-  border-bottom: 4px solid #e94848;
-  border-color: transparent;
+  border-bottom: 4px solid transparent;
   transition: border 150ms ease;
+}
+
+.header-container .bottom-wrapper ul.dropdown-links {
+  position: absolute;
+  background-color: white;
+  top: calc(100% + 5px);
 }
 
 .header-container .bottom-wrapper li:hover {
