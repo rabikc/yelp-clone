@@ -78,7 +78,7 @@ a {
 
 .header-container .top-part .logo-container {
   min-width: 80px;
-  width: calc((100vw - 810px) / 2);
+  width: calc((100vw - 1144px) / 2);
 }
 
 .header-container .logo-container a {
@@ -207,7 +207,8 @@ a {
 
 .header-container .bottom-wrapper {
   margin-left: 112px;
-  padding-left: 227px;
+  padding-left: calc((100vw - 1144px) / 2 - 161px);
+  min-width: fit-content;
 }
 
 .header-container .bottom-wrapper ul {
@@ -261,11 +262,7 @@ a {
 }
 
 .hero-section .hero-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translateY(-35%);
-  z-index: 5;
+  padding-top: 12rem;
 }
 
 .hero-section .hero-top-part {
@@ -340,6 +337,7 @@ a {
 .section-container {
   max-width: 1224px;
   padding: 0 2.5rem;
+  margin: auto;
 }
 
 .section-container > h1 {
